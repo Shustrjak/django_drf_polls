@@ -17,11 +17,3 @@ class Answer(models.Model):
         if len(str(self.text)) > 10:
             return f'{self.text[:10]}...'
         return self.text
-
-# class TypeAnswer(models.Model):
-#     ANSWER_CHOICES = [
-#         ('1', 'TextQuestion'),
-#         ('2', 'OneQuestion'),
-#         ('3', 'ManyQuestion'),
-#     ]
-#     title = models.CharField(max_length=255, choices=ANSWER_CHOICES, null=True)
