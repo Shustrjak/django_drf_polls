@@ -19,7 +19,6 @@ class QuestionSerializer(serializers.HyperlinkedModelSerializer):
 class AnswerSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Answer
-        fields = 'poll_id', 'question_id', 'text', 'checked', 'poll_id_id'
+        fields = 'question_id', 'text', 'checked'
 
-    poll_id = PollSerializer()
     question_id = QuestionSerializer()
